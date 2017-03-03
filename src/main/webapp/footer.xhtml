@@ -4,8 +4,14 @@
    	xmlns:p="http://primefaces.org/ui"
    	xmlns:f="http://xmlns.jcp.org/jsf/core">  
    	
-   	<h:form>
+   			<!--//footer-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<h:outputScript target="body" library="loChaarm" name="js/simpleCart.min.js" />
+	<h:outputScript target="body" library="loChaarm" name="js/bootstrap.min.js" />
+	<h:outputScript target="body" library="loChaarm" name="js/jquery.chocolat.js" />
+	<h:outputStylesheet library="loChaarm" name="css/chocolat.css"/>
    	
+   	<h:form>
    		<div class="footer" style="margin-top: 50px;">
 	<div class="footer-middle">
 				<div class="container">
@@ -54,7 +60,9 @@
 								<f:selectItem itemValue="pt" itemLabel="Português" />
 								<f:selectItem itemValue="en" itemLabel="English" />
 							</h:selectOneMenu>
-							<p:commandButton action="#{applicationMBean.alterarIdioma()}" 
+							<p:commandButton action="#{applicationMBean.alterarIdioma()}"
+											 ajax="false"
+											 oncomplete="location.reload();" 
 									 		 icon="fa  fa-fw fa-exchange" styleClass="button"/>
 					</div>
 					<div class="clearfix"> </div>
@@ -72,17 +80,12 @@
 			</div>
 			
 		</div>
-		<!--//footer-->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<h:outputScript target="body" library="loChaarm" name="js/simpleCart.min.js" />
-	<h:outputScript target="body" library="loChaarm" name="js/bootstrap.min.js" />
-	<h:outputScript target="body" library="loChaarm" name="js/jquery.chocolat.js" />
-	<h:outputStylesheet library="loChaarm" name="css/chocolat.css"/>
-	
-		<script type="text/javascript" charset="utf-8">
-		$(function() {
-			$('a.picture').Chocolat();
-		});
-		</script>
 		  	</h:form>
+		  
+		 
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$('a.picture').Chocolat();
+			});
+		</script>
    	</ui:composition>

@@ -30,10 +30,6 @@ public abstract class AbstractCommonMBean {
 		 FacesContext.getCurrentInstance().addMessage(null, facesMessage);
 	}
 	
-	public Boolean usaEstoque(){
-		return this.application.getConfiguracoes().getUtilizarEstoque();
-	}
-	
 	private void loadBundle(){
 		if(this.bundle == null){
 			this.bundle = ResourceBundle.getBundle(this.getBundleDir(), this.application.getLocale());

@@ -10,7 +10,7 @@ public class ConnectionUtil {
 	
 	public static EntityManagerFactory getEntityManagerFactory(){
 		if(entityManagerFactory == null){
-			entityManagerFactory = Persistence.createEntityManagerFactory("Open-Bar");
+			entityManagerFactory = Persistence.createEntityManagerFactory("loChaarm");
 		}
 		return entityManagerFactory;
 	}

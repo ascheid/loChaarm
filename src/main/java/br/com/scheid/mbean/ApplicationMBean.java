@@ -28,13 +28,8 @@ public class ApplicationMBean implements Serializable {
 		this.alterarIdioma();
 	}
 	
-	public String init(){
-		return "index";
-	}
-	
 	public void alterarIdioma(){
 		this.locale = new Locale(this.configuracoes.getLingua());
-		this.init();
 	}
 	
 	public Configuracoes getConfiguracoes() {
