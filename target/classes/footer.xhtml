@@ -1,0 +1,88 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+   	xmlns:p="http://primefaces.org/ui"
+   	xmlns:f="http://xmlns.jcp.org/jsf/core">  
+   	
+   	<h:form>
+   	
+   		<div class="footer" style="margin-top: 50px;">
+	<div class="footer-middle">
+				<div class="container">
+					<div class="col-md-3 footer-middle-in">
+						<a href="index.html"><img src="images/log.png" alt=""/></a>
+					</div>
+					
+					<div class="col-md-3 footer-middle-in">
+						<h6>#{indexMBean.getLabel('title1')}</h6>
+						<ul class=" in">
+							<li><a href="404.xhtml">#{indexMBean.getLabel('inf1')}</a></li>
+							<li><a href="contact.html">#{indexMBean.getLabel('inf2')}</a></li>
+							<li><a href="#">#{indexMBean.getLabel('inf3')}</a></li>
+							<li><a href="contact.html">#{indexMBean.getLabel('inf4')}</a></li>
+						</ul>
+						<ul class="in in1">
+							<li><a href="#">#{indexMBean.getLabel('inf5')}</a></li>
+							<li><a href="wishlist.html">#{indexMBean.getLabel('inf6')}</a></li>
+							<li><a href="login.html">#{indexMBean.getLabel('inf7')}</a></li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-3 footer-middle-in">
+						<h6>Tags</h6>
+						<ul class="tag-in">
+							<li><a href="#">#{indexMBean.getLabel('1')}</a></li>
+							<li><a href="#">#{indexMBean.getLabel('2')}</a></li>
+							<li><a href="#">#{indexMBean.getLabel('3')}</a></li>
+							<li><a href="#">#{indexMBean.getLabel('4')}</a></li>
+							<li><a href="#">#{indexMBean.getLabel('5')}</a></li>
+							<li><a href="#">#{indexMBean.getLabel('6')}</a></li>
+							<li><a href="#">#{indexMBean.getLabel('7')}</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-middle-in">
+						<h6>#{indexMBean.getLabel('title3')}</h6>
+						<span>#{indexMBean.getLabel('n1')}</span>
+							<form>
+								<input type="text" value="#{indexMBean.getLabel('n2')}" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Enter your E-mail';}"/>
+								<input type="submit" value="#{indexMBean.getLabel('n3')}"/>	
+							</form>
+					</div>
+					<div class=" lingua">
+
+							<h:selectOneMenu value="#{applicationMBean.configuracoes.lingua}">
+								<f:selectItem itemValue="pt" itemLabel="Português" />
+								<f:selectItem itemValue="en" itemLabel="English" />
+							</h:selectOneMenu>
+							<p:commandButton action="#{applicationMBean.alterarIdioma()}" 
+									 		 icon="fa  fa-fw fa-exchange" styleClass="button"/>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<ul class="footer-bottom-top" style="display: none;">
+						<li><a href="#"><img src="images/f2.png" class="img-responsive" alt=""/></a></li>
+						<li><a href="#"><img src="images/f3.png" class="img-responsive" alt=""/></a></li>
+					</ul>
+					<p class="footer-class" style="font-size: 70%;"> 2017 loCháàrm. All Rights Reserved | Developed by Alvaro Luiz Martins Scheid </p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			
+		</div>
+		<!--//footer-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<h:outputScript target="body" library="loChaarm" name="js/simpleCart.min.js" />
+	<h:outputScript target="body" library="loChaarm" name="js/bootstrap.min.js" />
+	<h:outputScript target="body" library="loChaarm" name="js/jquery.chocolat.js" />
+	<h:outputStylesheet library="loChaarm" name="css/chocolat.css"/>
+	
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('a.picture').Chocolat();
+		});
+		</script>
+		  	</h:form>
+   	</ui:composition>
