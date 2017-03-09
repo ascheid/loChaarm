@@ -18,6 +18,8 @@ public class Item extends AbstractModel<Long> implements Serializable{
 	@GeneratedValue
 	private Long id;
 	private BigDecimal preco;
+	private BigDecimal precoPromo;
+	private Boolean emPromo;
 	private String descricao;
 	private Boolean ativo;
 	private Boolean telaInicial;
@@ -92,4 +94,22 @@ public class Item extends AbstractModel<Long> implements Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+	public BigDecimal getPrecoPromo() {
+		return precoPromo;
+	}
+
+	public void setPrecoPromo(BigDecimal precoPromo) {
+		this.precoPromo = precoPromo;
+	}
+
+	public Boolean getEmPromo() {
+		return emPromo;
+	}
+
+	public void setEmPromo(Boolean emPromo) {
+		this.emPromo = emPromo;
+	}
+	
+	
 }

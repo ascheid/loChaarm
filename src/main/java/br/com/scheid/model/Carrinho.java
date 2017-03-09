@@ -22,6 +22,8 @@ public class Carrinho extends AbstractModel<Long> implements Serializable {
 	@GeneratedValue
 	private Long id;
 	private BigDecimal total;
+	private BigDecimal subTotal;
+	private BigDecimal desconto;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataPedido;
 	private BigDecimal frete;
@@ -87,4 +89,22 @@ public class Carrinho extends AbstractModel<Long> implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+	public BigDecimal getSubTotal() {
+		return subTotal;
+	}
+
+	public void setSubTotal(BigDecimal subTotal) {
+		this.subTotal = subTotal;
+	}
+
+	public BigDecimal getDesconto() {
+		return desconto;
+	}
+
+	public void setDesconto(BigDecimal desconto) {
+		this.desconto = desconto;
+	}
+	
+	
 }
